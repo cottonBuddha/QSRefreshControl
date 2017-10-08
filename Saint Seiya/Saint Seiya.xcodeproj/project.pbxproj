@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		436971761CE0C74400D85066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436971751CE0C74400D85066 /* AppDelegate.swift */; };
+		436971781CE0C74400D85066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436971771CE0C74400D85066 /* ViewController.swift */; };
+		4369717B1CE0C74400D85066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436971791CE0C74400D85066 /* Main.storyboard */; };
+		4369717D1CE0C74400D85066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4369717C1CE0C74400D85066 /* Assets.xcassets */; };
+		436971801CE0C74400D85066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4369717E1CE0C74400D85066 /* LaunchScreen.storyboard */; };
+		436971881CE0C90300D85066 /* Tangram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436971871CE0C90300D85066 /* Tangram.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		436971721CE0C74400D85066 /* Saint Seiya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saint Seiya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		436971751CE0C74400D85066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		436971771CE0C74400D85066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4369717A1CE0C74400D85066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4369717C1CE0C74400D85066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4369717F1CE0C74400D85066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		436971811CE0C74400D85066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		436971871CE0C90300D85066 /* Tangram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tangram.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4369716F1CE0C74400D85066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		436971691CE0C74400D85066 = {
+			isa = PBXGroup;
+			children = (
+				436971741CE0C74400D85066 /* Saint Seiya */,
+				436971731CE0C74400D85066 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		436971731CE0C74400D85066 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				436971721CE0C74400D85066 /* Saint Seiya.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		436971741CE0C74400D85066 /* Saint Seiya */ = {
+			isa = PBXGroup;
+			children = (
+				436971871CE0C90300D85066 /* Tangram.swift */,
+				436971751CE0C74400D85066 /* AppDelegate.swift */,
+				436971771CE0C74400D85066 /* ViewController.swift */,
+				436971791CE0C74400D85066 /* Main.storyboard */,
+				4369717C1CE0C74400D85066 /* Assets.xcassets */,
+				4369717E1CE0C74400D85066 /* LaunchScreen.storyboard */,
+				436971811CE0C74400D85066 /* Info.plist */,
+			);
+			path = "Saint Seiya";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		436971711CE0C74400D85066 /* Saint Seiya */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 436971841CE0C74400D85066 /* Build configuration list for PBXNativeTarget "Saint Seiya" */;
+			buildPhases = (
+				4369716E1CE0C74400D85066 /* Sources */,
+				4369716F1CE0C74400D85066 /* Frameworks */,
+				436971701CE0C74400D85066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Saint Seiya";
+			productName = "Saint Seiya";
+			productReference = 436971721CE0C74400D85066 /* Saint Seiya.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4369716A1CE0C74400D85066 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "江齐松";
+				TargetAttributes = {
+					436971711CE0C74400D85066 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = XLRR5L3VJY;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 4369716D1CE0C74400D85066 /* Build configuration list for PBXProject "Saint Seiya" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 436971691CE0C74400D85066;
+			productRefGroup = 436971731CE0C74400D85066 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				436971711CE0C74400D85066 /* Saint Seiya */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		436971701CE0C74400D85066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				436971801CE0C74400D85066 /* LaunchScreen.storyboard in Resources */,
+				4369717D1CE0C74400D85066 /* Assets.xcassets in Resources */,
+				4369717B1CE0C74400D85066 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4369716E1CE0C74400D85066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				436971881CE0C90300D85066 /* Tangram.swift in Sources */,
+				436971781CE0C74400D85066 /* ViewController.swift in Sources */,
+				436971761CE0C74400D85066 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		436971791CE0C74400D85066 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4369717A1CE0C74400D85066 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4369717E1CE0C74400D85066 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4369717F1CE0C74400D85066 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		436971821CE0C74400D85066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		436971831CE0C74400D85066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		436971851CE0C74400D85066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XLRR5L3VJY;
+				INFOPLIST_FILE = "Saint Seiya/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahyijie.caifupaiInHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "49609db5-d9e9-49ac-a48c-bd5a84c7c96c";
+				PROVISIONING_PROFILE_SPECIFIER = caifupaiInHouse_dev;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		436971861CE0C74400D85066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Saint Seiya/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahyijie.caifupaiInHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4369716D1CE0C74400D85066 /* Build configuration list for PBXProject "Saint Seiya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				436971821CE0C74400D85066 /* Debug */,
+				436971831CE0C74400D85066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		436971841CE0C74400D85066 /* Build configuration list for PBXNativeTarget "Saint Seiya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				436971851CE0C74400D85066 /* Debug */,
+				436971861CE0C74400D85066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4369716A1CE0C74400D85066 /* Project object */;
+}

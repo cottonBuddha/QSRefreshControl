@@ -1,9 +1,9 @@
 //
 //  QSRefreshControlManager.m
-//  CaiFuPai_swift
+//  demo
 //
 //  Created by 江齐松 on 2017/8/14.
-//  Copyright © 2017年 wangyaqing. All rights reserved.
+//  Copyright © 2017年 江齐松. All rights reserved.
 //
 
 #import "QSRefreshControlManager.h"
@@ -14,11 +14,10 @@ RCT_EXPORT_MODULE();
 
 - (QSRefreshControl *)view
 {
-    QSRefreshControl *refreshControl = [QSRefreshControl new];
-    refreshControl.refreshView;
-    return refreshControl;
+  return [QSRefreshControl new];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(onRefresh, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(refreshing, BOOL)
+
 @end

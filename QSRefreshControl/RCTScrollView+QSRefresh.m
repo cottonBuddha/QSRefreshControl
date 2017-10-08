@@ -1,33 +1,33 @@
 //
-//  RCTScrollView+YRTRefresh.m
-//  CaiFuPai_swift
+//  RCTScrollView+QSRefresh.m
+//  demo
 //
 //  Created by 江齐松 on 2017/5/10.
-//  Copyright © 2017年 wangyaqing. All rights reserved.
+//  Copyright © 2017年 江齐松. All rights reserved.
 //
 
-#import "RCTScrollView+YRNRefresh.h"
-#import "RCTRefreshControl.h"
-#import "UIView+React.h"
-#import "RCTAssert.h"
-#import <RCTUtils.h>
+#import "RCTScrollView+QSRefresh.h"
+#import <React/UIView+React.h>
+#import <React/RCTAssert.h>
+#import <React/RCTUtils.h>
+#import <objc/runtime.h>
 
 @implementation UIScrollView (YRNRefresh)
 
 /*
  * 下拉刷新
  */
-- (void)setRnRefreshView:(YRNRefreshControl *)refreshView {
-    
+- (void)setRnRefreshView:(QSRefreshControl *)refreshView
+{
     objc_setAssociatedObject(self, @selector(rnRefreshView), refreshView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIView *)rnRefreshView {
-    
+- (UIView *)rnRefreshView
+{
     return objc_getAssociatedObject(self, @selector(rnRefreshView));
 }
 
-- (void)setRefreshViewControl:(YRNRefreshControl *)refreshView
+- (void)setRefreshViewControl:(QSRefreshControl *)refreshView
 {
     if (self.rnRefreshView) {
         [self.rnRefreshView removeFromSuperview];
@@ -54,7 +54,7 @@
 
 - (void)replace_insertReactSubview:(UIView *)view atIndex:(NSInteger)atIndex {
 
-    if ([view isKindOfClass:[YRNRefreshControl class]]) {
+    if ([view isKindOfClass:[QSRefreshControl class]]) {
         [super insertReactSubview:view atIndex:atIndex];
 
         if ([self.scrollView respondsToSelector:@selector(setRefreshViewControl:)]) {
@@ -68,7 +68,7 @@
 
 - (void)replace_removeReactSubview:(UIView *)subview {
 
-    if ([subview isKindOfClass:[YRNRefreshControl class]]) {
+    if ([subview isKindOfClass:[QSRefreshControl class]]) {
         [super removeReactSubview:subview];
         if ([self.scrollView respondsToSelector:@selector(setRefreshViewControl:)]) {
             [self.scrollView performSelector:@selector(setRefreshViewControl:) withObject:nil];

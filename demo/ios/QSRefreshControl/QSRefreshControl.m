@@ -11,6 +11,7 @@
 #import "RCTScrollView+QSRefresh.h"
 
 #define kNavigationBarHeight 44
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
 
 @interface QSRefreshControl() <UIScrollViewDelegate>
 @property (nonatomic, assign) UIEdgeInsets originInset;
@@ -26,7 +27,7 @@
 {
   self = [super init];
   if (self) {
-    self.frame = CGRectMake(0, 0, 0, 0);
+    self.frame = CGRectMake(0, 0, kScreenWidth, kNavigationBarHeight);
     self.triggerDistance = kNavigationBarHeight;
     self.originInset = UIEdgeInsetsZero;
     

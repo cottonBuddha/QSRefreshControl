@@ -51,8 +51,7 @@ export default class demo extends Component {
     const MyRefresh = this.state.refreshType === 0 ? Alalei : Tangram;
     return <MyRefresh 
             refreshing={this.state.refreshing}
-            onRefresh={this._handleRefresh.bind(this)}
-            bigColor={0}/>
+            onRefresh={this._handleRefresh} />
   }
 
   render() {

@@ -13,7 +13,6 @@ import {
   ScrollView,
   FlatList,
   Dimensions,
-  RefreshControl,
   TouchableOpacity,
   requireNativeComponent
 } from 'react-native';
@@ -31,6 +30,10 @@ export default class demo extends Component {
       refreshType: 0,
       lines: '喜欢一个人需要理由吗？'
     }
+  }
+
+  componentDidMount() {
+    this._handleRefresh();
   }
 
   _handleRefresh = () => {

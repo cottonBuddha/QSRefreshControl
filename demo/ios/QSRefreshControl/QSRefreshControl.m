@@ -11,7 +11,6 @@
 #import "RCTScrollView+QSRefresh.h"
 
 #define kNavigationBarHeight 44
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
 
 @interface QSRefreshControl() <UIScrollViewDelegate>
 @property (nonatomic, assign) UIEdgeInsets originInset;
@@ -27,7 +26,7 @@
 {
   self = [super init];
   if (self) {
-    self.frame = CGRectMake(0, 0, kScreenWidth, kNavigationBarHeight);
+    self.frame = CGRectMake(0, 0, 0, 0);
     self.triggerDistance = kNavigationBarHeight;
     self.originInset = UIEdgeInsetsZero;
     
@@ -74,9 +73,9 @@
     self.triggerDistance = self.refreshView.triggerDistance ? self.refreshView.triggerDistance : kNavigationBarHeight;
     
     if (!_currentRefreshingState && _isInitialRender && _initialRefreshingState) {
-      [self refresh];
+      [self beginRefreshing];
     }
-    _isInitialRender = false;
+    _isInitialRender = NO;
   }
 }
 
@@ -102,14 +101,14 @@
   }
 }
 
-- (void)beginLoading
+- (void)releaseAndBeginRefreshing
 {
   if ([self.refreshView respondsToSelector: @selector(releaseAndBeginRefreshing)]) {
     [self.refreshView releaseAndBeginRefreshing];
   }
 }
 
-- (void)loadFinish
+- (void)stopRefreshingAndBackToOrigin
 {
   if ([self.refreshView respondsToSelector: @selector(stopRefreshingAndBackToOrigin)]) {
     [self.refreshView stopRefreshingAndBackToOrigin];
@@ -140,14 +139,17 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
   if (scrollView.contentOffset.y <= -self.triggerDistance - scrollView.contentInset.top) {
-    [self refresh];
+    [self beginRefreshing];
+    if (self.onRefresh) {
+      self.onRefresh(nil);
+    }
   }
 }
 
 /*
  * 刷新
  */
-- (void)refresh
+- (void)beginRefreshing
 {
   if (!_currentRefreshingState)
   {
@@ -159,11 +161,8 @@
          self.subScrollView.contentInset = UIEdgeInsetsMake(_originInset.top + self.triggerDistance, _originInset.left, _originInset.bottom - self.triggerDistance, _originInset.right);
          [self.subScrollView setContentOffset:CGPointMake(0, -self.subScrollView.contentInset.top) animated:NO];
        } completion:^(BOOL finished) {
-         [self beginLoading];
-         if (self.onRefresh) {
-           self.onRefresh(nil);
-         }
-       }];
+         [self releaseAndBeginRefreshing];
+      }];
     });
   }
 }
@@ -171,9 +170,9 @@
 /*
  * 刷新结束
  */
-- (void)refreshFinish
+- (void)endRefreshing
 {
-  [self loadFinish];
+  [self stopRefreshingAndBackToOrigin];
   [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^
    {
      self.subScrollView.contentInset = _originInset;
@@ -186,16 +185,20 @@
 
 - (void)setRefreshing:(BOOL)refreshing
 {
+  if (!refreshing && _initialRefreshingState) {
+    _initialRefreshingState = NO;
+  }
+  
   if (_currentRefreshingState != refreshing) {
     
     if (refreshing) {
       if (_isInitialRender) {
         _initialRefreshingState = refreshing;
       } else {
-        [self refresh];
+        [self beginRefreshing];
       }
     } else {
-      [self refreshFinish];
+      [self endRefreshing];
     }
   }
 }

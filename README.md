@@ -13,7 +13,8 @@ Just drag the folder named QSRefreshControl to your project.
 ![B9F995FA-3AB8-4EB6-A7CE-C6532C1B3019.png](http://upload-images.jianshu.io/upload_images/6277219-891af3ee524526e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ##### 2. Create your custom refresh component, here to TangramRefreshControl as an example:
 ##### 自定义刷新组件，这里以TangramRefreshControl为例：
-![D7AEF65E-A5B8-4911-B806-90751080CAD6.png](http://upload-images.jianshu.io/upload_images/6277219-5433f39ca5df45bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![D7AEF65E-A5B8-4911-B806-90751080CAD6.png](http://upload-images.jianshu.io/upload_images/6277219-5433f39ca5df45bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)     
+
 Prepare the animation view -- Tangram,conformed to QSRefreshMotionProtocol.The processing of each stage of the animation were placed in the corresponding method to achieve.     
 
 先准备遵守QSRefreshMotionProtocol的动画视图Tangram。下拉刷新各阶段动画的处理分别放在对应的方法中实现。

@@ -1,18 +1,18 @@
 # QSRefreshControl
 A customized refreshControl for react-native
 
-##演示/Demo
+## 演示/Demo
 ![demo2.gif](http://upload-images.jianshu.io/upload_images/6277219-219b4ee881f94777.gif?imageMogr2/auto-orient/strip)
 
 ## 安装/Installation
 将QSRefreshControl文件夹拖至项目中。   
 Just drag the folder named QSRefreshControl to your project.
 ## 使用/Usage
-#####1. Add the QSRefreshControl folder to the project, and the following files are included in the folder:    
-#####在工程中添加QSRefreshControl文件夹，文件夹内包括了以下文件：
+##### 1. Add the QSRefreshControl folder to the project, and the following files are included in the folder:    
+##### 在工程中添加QSRefreshControl文件夹，文件夹内包括了以下文件：
 ![B9F995FA-3AB8-4EB6-A7CE-C6532C1B3019.png](http://upload-images.jianshu.io/upload_images/6277219-891af3ee524526e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-#####2. Create your custom refresh component, here to TangramRefreshControl as an example:
-#####自定义刷新组件，这里以TangramRefreshControl为例：
+##### 2. Create your custom refresh component, here to TangramRefreshControl as an example:
+##### 自定义刷新组件，这里以TangramRefreshControl为例：
 ![D7AEF65E-A5B8-4911-B806-90751080CAD6.png](http://upload-images.jianshu.io/upload_images/6277219-5433f39ca5df45bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 Prepare the animation view -- Tangram,conformed to QSRefreshMotionProtocol.The processing of each stage of the animation were placed in the corresponding method to achieve.     
 
@@ -81,8 +81,8 @@ RCT_EXPORT_MODULE();
 }
 ```
 
-#####3. In this way, operation on native side is over, and then look at the useage on js side. Get the refresh component first：
-#####这样，原生端的处理就结束了，再来看js端的使用。先获取刷新组件：
+##### 3. In this way, operation on native side is over, and then look at the useage on js side. Get the refresh component first：
+##### 这样，原生端的处理就结束了，再来看js端的使用。先获取刷新组件：
 ```
 import {
   requireNativeComponent

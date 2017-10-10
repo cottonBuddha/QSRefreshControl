@@ -12,7 +12,7 @@
 #import <React/RCTUtils.h>
 #import <objc/runtime.h>
 
-@implementation UIScrollView (YRNRefresh)
+@implementation UIScrollView (QSRefresh)
 
 /*
  * 下拉刷新
@@ -40,7 +40,7 @@
 @end
 
 
-@implementation RCTScrollView (YRNRefresh)
+@implementation RCTScrollView (QSRefresh)
 
 + (void)load {
     static dispatch_once_t onceToken;

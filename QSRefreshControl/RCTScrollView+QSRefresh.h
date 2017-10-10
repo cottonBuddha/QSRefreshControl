@@ -9,12 +9,12 @@
 #import <React/RCTScrollView.h>
 #import "QSRefreshControl.h"
 
-@interface UIScrollView (YRNRefresh)
+@interface UIScrollView (QSRefresh)
 
 @property (nonatomic, strong) QSRefreshControl * rnRefreshView;
 
 @end
 
-@interface RCTScrollView (YRNRefresh)
+@interface RCTScrollView (QSRefresh)
 
 @end

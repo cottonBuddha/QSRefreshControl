@@ -34,7 +34,6 @@
     }
     self.rnRefreshView = refreshView;
     [self addSubview:refreshView];
-
 }
 
 @end
@@ -48,26 +47,22 @@
         RCTSwapInstanceMethods([self class], @selector(insertReactSubview:atIndex:), @selector(replace_insertReactSubview:atIndex:));
         
         RCTSwapInstanceMethods([self class], @selector(removeReactSubview:), @selector(replace_removeReactSubview:));
-
     });
 }
 
 - (void)replace_insertReactSubview:(UIView *)view atIndex:(NSInteger)atIndex {
-
     if ([view isKindOfClass:[QSRefreshControl class]]) {
         [super insertReactSubview:view atIndex:atIndex];
-
+        
         if ([self.scrollView respondsToSelector:@selector(setRefreshViewControl:)]) {
             [self.scrollView performSelector:@selector(setRefreshViewControl:) withObject:view];
         }
     } else {
         [self replace_insertReactSubview:view atIndex:atIndex];
     }
-    
 }
 
 - (void)replace_removeReactSubview:(UIView *)subview {
-
     if ([subview isKindOfClass:[QSRefreshControl class]]) {
         [super removeReactSubview:subview];
         if ([self.scrollView respondsToSelector:@selector(setRefreshViewControl:)]) {
@@ -76,7 +71,6 @@
     } else {
         [self replace_removeReactSubview:subview];
     }
-
 }
 
 @end

@@ -11,7 +11,7 @@ Just drag the folder named QSRefreshControl to your project.
 ##### 1. Add the QSRefreshControl folder to the project, and the following files are included in the folder:    
 ##### 在工程中添加QSRefreshControl文件夹，文件夹内包括了以下文件：
 ![B9F995FA-3AB8-4EB6-A7CE-C6532C1B3019.png](http://upload-images.jianshu.io/upload_images/6277219-891af3ee524526e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-##### 2. Create your custom refresh component, here to TangramRefreshControl as an example:
+##### 2. Create your refresh component, here to TangramRefreshControl as an example:
 ##### 自定义刷新组件，这里以TangramRefreshControl为例：
 ![D7AEF65E-A5B8-4911-B806-90751080CAD6.png](http://upload-images.jianshu.io/upload_images/6277219-5433f39ca5df45bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)     
 

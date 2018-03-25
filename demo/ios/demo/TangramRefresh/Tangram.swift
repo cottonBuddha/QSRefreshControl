@@ -7,7 +7,7 @@
 //
 
 import UIKit
-enum assembleType:Int{
+enum assembleType: Int{
   case fox = 0
 }
 
@@ -30,7 +30,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return triangle
   }()//大三角板1
   
-  lazy var greenTriangle:CAShapeLayer = {
+  lazy var greenTriangle: CAShapeLayer = {
     let path = UIBezierPath.init()
     path.move(to: CGPoint(x: 0, y: 0))
     path.addLine(to: CGPoint(x: 0, y: self.sideLength))
@@ -45,7 +45,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return triangle
   }()//大三角板2
   
-  lazy var brownTriangle:CAShapeLayer = {
+  lazy var brownTriangle: CAShapeLayer = {
     let path = UIBezierPath.init()
     path.move(to: CGPoint(x: 0, y: 0))
     path.addLine(to: CGPoint(x: self.sideLength * 0.5, y: 0))
@@ -60,7 +60,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return triangle
   }()//小三角板1
   
-  lazy var yellowSquare:CAShapeLayer = {
+  lazy var yellowSquare: CAShapeLayer = {
     let path = UIBezierPath.init()
     path.move(to: CGPoint(x: 0, y: 0))
     path.addLine(to: CGPoint(x: -self.sideLength * 0.25, y: self.sideLength * 0.25))
@@ -76,7 +76,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return square
   }()//正方形板1
   
-  lazy var blueParallelogram:CAShapeLayer = {
+  lazy var blueParallelogram: CAShapeLayer = {
     let path = UIBezierPath.init()
     path.move(to: CGPoint(x: 0, y: 0))
     path.addLine(to: CGPoint(x: 0, y: self.sideLength * 0.5))
@@ -92,7 +92,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return parallelogram
   }()//平行四边形板1
   
-  lazy var indigoTriangle:CAShapeLayer = {
+  lazy var indigoTriangle: CAShapeLayer = {
     let path = UIBezierPath.init()
     path.move(to: CGPoint(x: 0, y: 0))
     path.addLine(to: CGPoint(x: self.sideLength * 0.25, y: -self.sideLength * 0.25))
@@ -107,7 +107,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return triangle
   }()//小三角板2
   
-  lazy var redTriangle:CAShapeLayer = {
+  lazy var redTriangle: CAShapeLayer = {
     let path = UIBezierPath.init()
     path.move(to: CGPoint(x: 0, y: 0))
     path.addLine(to: CGPoint(x: self.sideLength * 0.5, y: 0))
@@ -124,6 +124,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
   
   let anim = CABasicAnimation.init(keyPath: "transform")
   var current:Float?
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     orangeTriangle.position = CGPoint(x: 0, y: self.sideLength)
@@ -149,16 +150,13 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     self.layer.addSublayer(blueParallelogram)
     self.layer.addSublayer(indigoTriangle)
     self.layer.addSublayer(redTriangle)
-    
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  
-  fileprivate func updateTangramBy(_ progress:CGFloat){
-    
+  fileprivate func updateTangramBy(_ progress:CGFloat) {
     let orangeProgress = CGFloat(min(0.14, max(0, progress))) / 0.14
     let greenProgress = CGFloat(min(0.28, max(0.14, progress)) - 0.14) / 0.14
     let indigoProgress = CGFloat(min(0.42, max(0.28, progress)) - 0.28) / 0.14
@@ -181,7 +179,6 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     self.yellowSquare.position.y = -40 + yellowProgress * 40;
     self.brownTriangle.position.y = -50 + brownProgress * 50;
     self.redTriangle.position.y = -60 + redProgress * 60;
-    
   }
   
   func animateTri() {
@@ -198,7 +195,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     orangeTriangle.add(anim, forKey: nil)
   }
   
-  func disruptSevensWith(_ progress:CGFloat) {
+  func disruptSevensWith(_ progress: CGFloat) {
     orangeTriangle.frame.origin = CGPoint(x: 0 + progress*0, y: self.sideLength + progress*80)
     greenTriangle.frame.origin = CGPoint(x: 0 - progress*self.sideLength * 0.5, y: 0 + progress*self.sideLength * 0.25)
     brownTriangle.frame.origin = CGPoint(x: 0 - progress*self.sideLength * 0.75, y: 0 - progress*self.sideLength * 0.75)
@@ -208,7 +205,7 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     redTriangle.frame.origin = CGPoint(x: self.sideLength * 0.5 + progress*self.sideLength * 0.75, y: 0 - progress*self.sideLength * 0.75)
   }
   
-  func assembleSevensTo(_ type:assembleType) {
+  func assembleSevensTo(_ type: assembleType) {
     self.assembleSevensToFox()
   }
   
@@ -256,11 +253,9 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     yellowSquare.opacity = 0
     brownTriangle.opacity = 0
     redTriangle.opacity = 0
-
   }
   
   func startShining() {
-    
     let alpha = CABasicAnimation.init(keyPath: "opacity")
     alpha.fromValue = 1
     alpha.toValue = 0.3
@@ -301,4 +296,3 @@ class Tangram: UIView, QSRefreshMotionProtocol {
     return 120
   }
 }
-

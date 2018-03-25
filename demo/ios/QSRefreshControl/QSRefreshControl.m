@@ -190,15 +190,14 @@
   }
   
   if (_currentRefreshingState != refreshing) {
-    
-    if (refreshing) {
-      if (_isInitialRender) {
-        _initialRefreshingState = refreshing;
-      } else {
-        [self beginRefreshing];
-      }
-    } else {
+    if (!refreshing) {
       [self endRefreshing];
+      return;
+    }
+    if (_isInitialRender) {
+      _initialRefreshingState = refreshing;
+    } else {
+      [self beginRefreshing];
     }
   }
 }

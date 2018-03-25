@@ -41,7 +41,8 @@
 
 @implementation RCTScrollView (QSRefresh)
 
-+ (void)load {
++ (void)load
+{
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     RCTSwapInstanceMethods([self class], @selector(insertReactSubview:atIndex:), @selector(replace_insertReactSubview:atIndex:));
@@ -50,7 +51,8 @@
   });
 }
 
-- (void)replace_insertReactSubview:(UIView *)view atIndex:(NSInteger)atIndex {
+- (void)replace_insertReactSubview:(UIView *)view atIndex:(NSInteger)atIndex
+{
   if ([view isKindOfClass:[QSRefreshControl class]]) {
     [super insertReactSubview:view atIndex:atIndex];
     
@@ -62,7 +64,8 @@
   }
 }
 
-- (void)replace_removeReactSubview:(UIView *)subview {
+- (void)replace_removeReactSubview:(UIView *)subview
+{
   if ([subview isKindOfClass:[QSRefreshControl class]]) {
     [super removeReactSubview:subview];
     if ([self.scrollView respondsToSelector:@selector(setRefreshViewControl:)]) {
